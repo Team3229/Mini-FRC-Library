@@ -76,7 +76,7 @@ void loop() {
   }
 
   // Does a full rotation of a motor
-  if (dink.buttonPressed(0) /*Button activation (PestoLink button held or DinkLink button pressed)*/) {
+  if (replaceMe /*Button activation (PestoLink button held or DinkLink button pressed e.g. dink.buttonPressed(0))*/) {
     wantedAngle += fullRotation;
     Serial.println("Changed angle"); // this is a debug printer that can be removed
   } 

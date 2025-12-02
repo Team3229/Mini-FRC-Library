@@ -26,8 +26,8 @@ How to implement (this covers simple modules which the user can fix):
   float x = dink.getAxis(0); 
   float y = -dink.getAxis(1); 
 
-  float x = pesto.getAxis(0); 
-  float y = pesto.getAxis(1);
+  float x = PestoLink.getAxis(0); 
+  float y = PestoLink.getAxis(1);
 
 - Deadzone and speed
   These values are mainly for adjusting the motor to the "wanted angle"

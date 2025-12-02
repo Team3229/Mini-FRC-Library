@@ -28,6 +28,7 @@ How to implement (this covers simple modules which the user can fix):
 
   float x = PestoLink.getAxis(0); 
   float y = PestoLink.getAxis(1);
+  See the P&P file for standard setup for DinkLink
 
 - Deadzone and speed
   These values are mainly for adjusting the motor to the "wanted angle"

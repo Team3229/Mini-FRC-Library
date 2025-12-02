@@ -69,7 +69,7 @@ void loop() {
   // Prints the current angle and wanted angle every 100 ms (1/10 of a second) (this is a debug printer that can be removed)
   if (lastPrintTime + 100 < millis()) {
     Serial.print("Motor pos: ");
-    Serial.print(encoderedMotor.getPosition());
+    Serial.print(rotation);
     Serial.print("    Wanted angle pos: ");
     Serial.println(wantedAngle);
     lastPrintTime = millis();

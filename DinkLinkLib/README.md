@@ -6,7 +6,7 @@ The documentation is close to PestoLink but with changes
 
 You can zip the DinkLink folder and add it to Arduino IDE using the "add zip library"
 
-void begin();                       - Placed at setup to begin the WebSockets communication
+void begin();                       - Placed at setup to begin the WebSockets communication\n
 void loop();                        - Placed in loop to update the following functions:
 bool buttonHeld(uint8_t index);     - If the button number is held. Repeats when held
 bool buttonPressed(uint8_t index);  - If the button number is pressed. Shoots once when held

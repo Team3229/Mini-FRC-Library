@@ -21,7 +21,6 @@ NoU_Drivetrain drivetrain(&frontLeftMotor, &frontRightMotor, &rearLeftMotor, &re
 
 // Variables (play with)
 const float speed = 0.8;
-const float spoolSpeed = 1;
 const float deadzone = 0.2;
 const bool mobile = false;
 
@@ -46,10 +45,10 @@ void loop() {
   // If one or more joysticks (controller mode has the left stick up/down being forward/backward and right stick left/right being counterclockwise/clockwise)
   if (mobile) {
     x = dink.getAxis(0);
-    y = -dink.getAxis(1);
+    y = -dink.getAxis(1); // DinkLink y is inverted so -reading is best fit
   } else {
     x = dink.getAxis(2);
-    y = -dink.getAxis(1);
+    y = -dink.getAxis(1); // DinkLink y is inverted so -reading is best fit
   }
 
   float throttle = 0;
@@ -64,7 +63,7 @@ void loop() {
 
   // If joystick is outside the deadzone
   if (abs(y) > deadzone) {
-    throttle = y * speed; // DinkLink y is inverted so -y is best fit
+    throttle = y * speed; 
     Serial.print("Throttle set: ");
     Serial.println(throttle);
   }

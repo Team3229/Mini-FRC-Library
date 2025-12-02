@@ -1,0 +1,99 @@
+:root{
+  --bg:#0f1113;
+  --panel:#16171a;
+  --muted:#9aa0a6;
+  --accent:#2ea3ff;
+  --btn:#2b2f33;
+  --btn-active:#4a90e2;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:18px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.device-id {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.device-id input {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+}
+
+h1{font-size:18px;margin:0;color:var(--muted)}
+
+.mode-toggle{font-size:14px;color:var(--muted)}
+.mode-toggle input{margin-right:8px}
+
+.input-mode{display:none;flex-direction:column;align-items:center}
+.input-mode.active{display:flex}
+
+/* Sticks row for controller view */
+.sticks-row{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+.stick-box{display:flex;flex-direction:column;align-items:center;gap:8px}
+.stick-label{font-size:13px;color:var(--muted)}
+.stick-canvas{
+  width:150px;height:150px;border-radius:12px;background:linear-gradient(180deg,#1b1c1d,#111214);
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;border:1px solid #222;
+}
+
+/* Joystick zone for nipple.js */
+.joystick-zone{
+  width:220px;height:220px;border-radius:50%;background:linear-gradient(180deg,#141516,#0b0c0d);position:relative;border:1px solid #222;
+  display:flex;align-items:center;justify-content:center;margin-bottom:8px;
+}
+
+/* Buttons grid */
+.button-grid{
+  display:grid;
+  gap:10px;
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+}
+
+#controllerButtons{grid-template-columns:repeat(5,1fr)}
+#mobileButtons{grid-template-columns:repeat(4,1fr)}
+
+button{
+  background:var(--btn);color:#fff;border:none;padding:10px 8px;border-radius:8px;font-weight:600;cursor:pointer;
+  transition:transform .08s ease, background .12s ease;
+  box-shadow:0 2px 0 rgba(0,0,0,.3);
+}
+button:active{transform:translateY(1px);background:var(--btn-active)}
+
+footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+#debug{margin-top:8px;font-size:12px;color:#cbd5e1;white-space:pre-wrap;max-height:120px;overflow:auto}
+@media (max-width:680px){
+  .sticks-row{gap:12px}
+  .stick-canvas{width:120px;height:120px}
+  .joystick-zone{width:180px;height:180px}
+}

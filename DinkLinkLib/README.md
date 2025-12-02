@@ -9,3 +9,7 @@ void loop();                        - Placed in loop to update the following fun
 bool buttonHeld(uint8_t index);     - If the button number is held. Repeats when held
 bool buttonPressed(uint8_t index);  - If the button number is pressed. Shoots once when held
 float getAxis(uint8_t index);       - Gets the axis of the joystick(s) (the values of 1 and 3 are "inverted" with up being a negative value and vice versa)
+
+To start the server first install nodejs then run 
+node server.js
+It should do the rest but you might have to install libraries

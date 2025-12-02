@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DinkLink Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DinkLink Dashboard</h1>
+    <label class="device-id">
+      Device ID:
+      <input type="text" id="deviceIdInput" value="Your Name Here" />
+    </label>
+    <label class="mode-toggle">
+      <input type="checkbox" id="modeToggle" />
+      <span>Use Gamepad</span>
+    </label>
+  </header>
+
+  <!-- Controller view: 2 sticks + 10 buttons -->
+  <main id="controllerUI" class="input-mode">
+    <section class="sticks-row">
+      <div class="stick-box">
+        <div class="stick-label">Left Stick</div>
+        <div id="leftStick" class="stick-canvas"></div>
+      </div>
+      <div class="stick-box">
+        <div class="stick-label">Right Stick</div>
+        <div id="rightStick" class="stick-canvas"></div>
+      </div>
+    </section>
+
+    <section class="button-grid" id="controllerButtons">
+      <button data-index="0">A</button>
+      <button data-index="1">B</button>
+      <button data-index="2">X</button>
+      <button data-index="3">Y</button>
+      <button data-index="4">L1</button>
+      <button data-index="5">R1</button>
+      <button data-index="6">L2</button>
+      <button data-index="7">R2</button>
+      <button data-index="8">Start</button>
+      <button data-index="9">Select</button>
+    </section>
+  </main>
+
+  <!-- Mobile view: 1 nipple joystick + 12 buttons -->
+  <main id="mobileUI" class="input-mode active">
+    <section class="mobile-stick">
+      <div id="mobileJoystickZone" class="joystick-zone"></div>
+      <div class="stick-label">Mobile Stick</div>
+    </section>
+
+    <section class="button-grid" id="mobileButtons">
+      <button data-index="0">B0</button><button data-index="1">B1</button>
+      <button data-index="2">B2</button><button data-index="3">B3</button>
+      <button data-index="4">B4</button><button data-index="5">B5</button>
+      <button data-index="6">B6</button><button data-index="7">B7</button>
+      <button data-index="8">B8</button><button data-index="9">B9</button>
+      <button data-index="10">B10</button><button data-index="11">B11</button>
+    </section>
+  </main>
+
+  <footer>
+    <div id="status">Connecting…</div>
+    <div id="debug" aria-hidden="true"></div>
+  </footer>
+
+  <!-- Nipple.js CDN (for joystick) -->
+  <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.9.0/dist/nipplejs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

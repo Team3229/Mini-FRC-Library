@@ -1,10 +1,10 @@
-#This is my library which is free to use
+# This is my library which is free to use
 
-##Requires the Arduino library WebSockets by Markus Sattler to be installed (thanks)
+## Requires the Arduino library WebSockets by Markus Sattler to be installed (thanks)
 
-##You can zip the DinkLink folder and add it to Arduino IDE using the "add zip library"
+## You can zip the DinkLink folder and add it to Arduino IDE using the "add zip library"
 
-##The documentation is close to PestoLink but with changes
+## The documentation is close to PestoLink but with changes
 
 
 void begin();                       - Placed at setup to begin the WebSockets communication
@@ -18,7 +18,7 @@ bool buttonPressed(uint8_t index);  - If the button number is pressed. Shoots on
 float getAxis(uint8_t index);       - Gets the axis of the joystick(s) (the values of 1 and 3 are "inverted" with up being a negative value and vice versa)
 
 
-#To start the server
+# To start the server
 
 first install nodejs then run 
 
@@ -29,7 +29,7 @@ It should do the rest but you might have to install libraries
 The website will be hosted on the ip's port 8080 
 
 
-#How to find the ip:
+# How to find the ip:
 
 The ip then will be 
 

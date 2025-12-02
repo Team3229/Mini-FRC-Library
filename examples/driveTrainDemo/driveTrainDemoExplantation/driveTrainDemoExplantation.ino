@@ -10,7 +10,8 @@ WARNING THIS SCRIPT HAS INTENTIONAL ERRORS, read me:
 PLEASE read the user manual as it might cover bugs or needed actions
 */
 
-/*User manual (a list of what the user (you) needs to fix/implement):
+/*
+User manual (a list of what the user (you) needs to fix/implement):
 - Motor port
 - Axis value
 - Wheel initialization

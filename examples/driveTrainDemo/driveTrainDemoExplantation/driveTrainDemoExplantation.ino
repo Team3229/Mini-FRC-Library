@@ -22,9 +22,9 @@ Maybe fix (I don't know if this was just my issue or a wide issue):
 How to implement (this covers simple modules which the user can fix):
 - Axis value
   The best way to do this is read the documentation of the link system you are using
-  For example the values for DinkLink and PestoLink are: (DinkLink Y is inverted)
+  For example the values for DinkLink and PestoLink are: 
   float x = dink.getAxis(0); 
-  float y = -dink.getAxis(1); 
+  float y = -dink.getAxis(1); (DinkLink Y is inverted)
 
   float x = PestoLink.getAxis(0); 
   float y = PestoLink.getAxis(1);

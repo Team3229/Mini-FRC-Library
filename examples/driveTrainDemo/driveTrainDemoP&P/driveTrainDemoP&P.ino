@@ -3,11 +3,11 @@
 
 // DinkLink initialization (you may need to adjust)
 // If this lib doesn't work then get the library WebSockets by Markus Sattler by going into the library manager on the left side and searching "WebSockets"
-const char* WIFI_SSID = "HawktimusDotNet";    // Wifi name
-const char* WIFI_PASS = "Hawk3229";           // Wifi password
-const char* SERVER_IP = "hawktimus.local";    // Server ip that is running DinkLink
-const char* DEVICE_ID = "Your Bot Name Here"; // Put your bots name here, this will be used later to connect
-bool NoUBoard = true;                         // If you're using a NoU* board (only for debugging with any other boards. Keep this true)
+const char* WIFI_SSID = "Put Wifi name";
+const char* WIFI_PASS = "Put Wifi password";
+const char* SERVER_IP = "Put IP here";
+const char* DEVICE_ID = "test"; // put your id here (it will be used on the link page)
+bool NoUBoard = true; // Debug power mode, ignore
 
 DinkLink dink(WIFI_SSID, WIFI_PASS, SERVER_IP, DEVICE_ID, NoUBoard);  // Server port 8080 (e.g. http://xxx.xxx.x.xx:8080/ or if the pc is hosting http://localhost:8080/)
 
